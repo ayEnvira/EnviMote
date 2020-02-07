@@ -1,0 +1,44 @@
+sudo: required
+dist: trusty
+
+language: c
+
+compiler: gcc
+
+# disable the default submodule logic
+git:
+  submodules: false
+
+# use sed to replace the SSH URL with the public URL, then init and update submodules
+before_install:
+ - sed -i 's/git@github.com:/git:\/\/github.com\//' .gitmodules
+# - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+ - git submodule update --init --recursive
+ - sudo apt-get update -qq
+
+install:
+# compile GNU make 4.1 from sources before using it without defect for Optiboot build
+  - cd extras
+  - sudo wget http://ftp.gnu.org/gnu/make/make-4.1.tar.bz2
+  - sudo tar -xjf make-4.1.tar.bz2
+  - cd make-4.1
+  - sudo ./configure
+  - sudo make
+  - cp ./make ../..
+  - cd ../..
+# Install AVR tools
+  - sudo apt-get install -qq gcc-avr binutils-avr avr-libc
+
+script:
+  - ./make
+
+env:
+
+#deploy:
+#  provider: releases
+#  user: "GITHUB USERNAME"
+#  password: "GITHUB PASSWORD"
+#  file: "FILE TO UPLOAD"
+#  skip_cleanup: true
+#  on:
+#    tags: true
