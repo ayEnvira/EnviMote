@@ -134,7 +134,7 @@ static const uint8_t A7  = PIN_A7 ;
 /*
  * SPI Interfaces
  */
-#define SPI_INTERFACES_COUNT 3
+#define SPI_INTERFACES_COUNT 1
 
 #define PIN_SPI_MOSI         (32ul)
 #define PIN_SPI_MISO         (33ul)
