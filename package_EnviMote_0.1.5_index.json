@@ -18,8 +18,8 @@
           "category": "Contributed",
           "url": "https://github.com/ayEnvira/EnviMote/releases/download/v0.1.5/EnviMote-0.1.5.tar.bz2",
           "archiveFileName": "EnviMote-0.1.5.tar.bz2",
-          "checksum": "SHA-256:6638a558c561a2e07c134cd86f94133206a560363122117c308fcc10f4130565",
-          "size": "37283",
+          "checksum": "SHA-256:802321138f99aa2f7e62a6dfd2ea71f6cb84f922ca9ade5967a127f3f7fe5db1",
+          "size": "37374",
           "boards": [
             {
               "name": "envimote_board_v1"
