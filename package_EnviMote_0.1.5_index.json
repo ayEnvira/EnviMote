@@ -4,7 +4,7 @@
     {
       "name": "EnviMote",
       "maintainer": "Envira Sostenible S.A.",
-      "websiteURL": "https://github.com/EnviMote/wiki",
+      "websiteURL": "https://github.com/ayEnvira/EnviMote/wiki",
       "help":
       {
         "online": "http://www.arduino.cc/en/Reference/HomePage"
@@ -14,12 +14,12 @@
         {
           "name": "EnviMote Board",
           "architecture": "samd",
-          "version": "0.1.3",
+          "version": "0.1.5",
           "category": "Contributed",
-          "url": "https://github.com/ayEnvira/EnviMote/releases/download/v0.1.3/EnviMote-0.1.3.tar.bz2",
-          "archiveFileName": "EnviMote-0.1.3.tar.bz2",
-          "checksum": "SHA-256:b48f8580175fc9f50ef81dc72f129c1aabc061b3d3dcad4046178c49d591b739",
-          "size": "24832",
+          "url": "https://github.com/ayEnvira/EnviMote/releases/download/v0.1.5/EnviMote-0.1.5.tar.bz2",
+          "archiveFileName": "EnviMote-0.1.5.tar.bz2",
+          "checksum": "SHA-256:6638a558c561a2e07c134cd86f94133206a560363122117c308fcc10f4130565",
+          "size": "37283",
           "boards": [
             {
               "name": "envimote_board_v1"
