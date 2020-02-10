@@ -4,7 +4,7 @@
     {
       "name": "EnviMote",
       "maintainer": "Envira Sostenible S.A.",
-      "websiteURL": "https://github.com/EnviMote/wiki",
+      "websiteURL": "https://github.com/ayEnvira/EnviMote/wiki",
       "help":
       {
         "online": "http://www.arduino.cc/en/Reference/HomePage"
@@ -16,7 +16,7 @@
           "architecture": "samd",
           "version": "%%VERSION%%",
           "category": "Contributed",
-          "url": "https://github.com/EnviMote/releases/download/v%%VERSION%%/%%FILENAME%%",
+          "url": "https://github.com/ayEnvira/EnviMote/releases/download/v%%VERSION%%/%%FILENAME%%",
           "archiveFileName": "%%FILENAME%%",
           "checksum": "SHA-256:%%CHECKSUM%%",
           "size": "%%SIZE%%",

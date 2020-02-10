@@ -1,5 +1,5 @@
 #
-#  Atmel SAMD21/R21/W25 Xplained Pros Arduino IDE Module makefile.
+#  Envimote Arduino IDE Module makefile.
 #
 #  Copyright (c) 2015 Atmel Corp./Thibaut VIARD. All right reserved.
 #
