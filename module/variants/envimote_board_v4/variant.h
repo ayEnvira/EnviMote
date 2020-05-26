@@ -110,31 +110,31 @@ static const uint8_t A7  = PIN_A7 ;
 // Serial (Console)
 #define PIN_SERIAL_RX       (0ul)
 #define PIN_SERIAL_TX       (1ul)
-#define PAD_SERIAL_RX       (SERCOM_RX_PAD_1)
-#define PAD_SERIAL_TX       (UART_TX_PAD_0)
+#define PAD_SERIAL_RX       (SERCOM_RX_PAD_3)
+#define PAD_SERIAL_TX       (UART_TX_PAD_2)
 
 // Serial1
-#define PIN_SERIAL1_RX       (24ul)
-#define PIN_SERIAL1_TX       (25ul)
+#define PIN_SERIAL1_RX       (26ul)
+#define PIN_SERIAL1_TX       (27ul)
 #define PAD_SERIAL1_RX       (SERCOM_RX_PAD_1)
 #define PAD_SERIAL1_TX       (UART_TX_PAD_0)
 
 // Serial2
-#define PIN_SERIAL2_RX       (26ul)
-#define PIN_SERIAL2_TX       (27ul)
+#define PIN_SERIAL2_RX       (28ul)
+#define PIN_SERIAL2_TX       (29ul)
 #define PAD_SERIAL2_RX       (SERCOM_RX_PAD_1)
 #define PAD_SERIAL2_TX       (UART_TX_PAD_0)
 
 // Serial3
-#define PIN_SERIAL3_RX       (28ul)
-#define PIN_SERIAL3_TX       (29ul)
+#define PIN_SERIAL3_RX       (30ul)
+#define PIN_SERIAL3_TX       (31ul)
 #define PAD_SERIAL3_RX       (SERCOM_RX_PAD_1)
 #define PAD_SERIAL3_TX       (UART_TX_PAD_0)
 
 /*
  * SPI Interfaces
  */
-#define SPI_INTERFACES_COUNT 1
+#define SPI_INTERFACES_COUNT 2
 
 #define PIN_SPI_MOSI         (32ul)
 #define PIN_SPI_MISO         (33ul)
@@ -149,15 +149,33 @@ static const uint8_t MOSI = PIN_SPI_MOSI ;
 static const uint8_t MISO = PIN_SPI_MISO ;
 static const uint8_t SCK  = PIN_SPI_SCK ;
 
+#define PIN_SPI1_MOSI         (52ul)
+#define PIN_SPI1_MISO         (53ul)
+#define PIN_SPI1_SCK          (54ul)
+#define PIN_SPI1_SS           (7ul)
+#define PERIPH_SPI1           sercom2
+#define PAD_SPI1_TX           SPI_PAD_0_SCK_3
+#define PAD_SPI1_RX           SERCOM_RX_PAD_1
+
+static const uint8_t SS1	= PIN_SPI1_SS ;
+static const uint8_t MOSI1 	= PIN_SPI1_MOSI ;
+static const uint8_t MISO1 	= PIN_SPI1_MISO ;
+static const uint8_t SCK1  	= PIN_SPI1_SCK ;
+
 /*
  * Wire Interfaces
  */
-#define WIRE_INTERFACES_COUNT 1
+#define WIRE_INTERFACES_COUNT 2
 
-#define PIN_WIRE_SCL         (30ul)
-#define PIN_WIRE_SDA         (31ul)
+#define PIN_WIRE_SCL         (24ul)
+#define PIN_WIRE_SDA         (25ul)
 #define PERIPH_WIRE          sercom0
 #define WIRE_IT_HANDLER      SERCOM0_Handler
+
+#define PIN_WIRE1_SCL         (30ul)
+#define PIN_WIRE1_SDA         (31ul)
+#define PERIPH_WIRE1          sercom1
+#define WIRE1_IT_HANDLER      SERCOM1_Handler
 
 /*
  * USB
@@ -190,6 +208,9 @@ extern SERCOM sercom4;
 extern SERCOM sercom5;
 
 extern Uart Serial;
+extern Uart Serial1;
+extern Uart Serial2;
+extern Uart Serial3;
 
 #endif
 

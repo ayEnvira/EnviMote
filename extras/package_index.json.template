@@ -22,7 +22,7 @@
           "size": "%%SIZE%%",
           "boards": [
             {
-              "name": "envimote_board_v1"
+              "name": "envimote_board_v4"
             }
           ],
           "toolsDependencies":

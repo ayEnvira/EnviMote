@@ -14,6 +14,9 @@
 # License along with this library; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
+menu.CPUFreq=CPU Frequency
+menu.BootloaderLD=Bootloader
+
 #--------------------------------------------------------------------------------------#
 envimote.name=enviMote
 envimote.vid.0=0x03eb
@@ -27,18 +30,31 @@ envimote.upload.use_1200bps_touch=true
 envimote.upload.wait_for_upload_port=true
 envimote.upload.native_usb=false
 envimote.build.mcu=cortex-m0plus
-envimote.build.f_cpu=48000000L
+envimote.build.f_cpu=8000000L
 envimote.build.usb_product="Atmel SAMD21-XPRO"
 envimote.build.usb_manufacturer="Atmel Corp"
 envimote.build.board=ENVIRA_Mote
 envimote.build.core=arduino:arduino
-envimote.build.extra_flags=-D__SAMD21J18A__ {build.usb_flags}
+envimote.build.extra_flags=-D__SAMD21J18A__
 envimote.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 envimote.build.openocdscript=
-envimote.build.variant=envimote_board_v1
+envimote.build.variant=envimote_board_v4
 envimote.build.variant_system_lib=
 envimote.build.vid=0x2341
 envimote.build.pid=0x804d
 
+envimote.menu.CPUFreq.48=48MHz
+envimote.menu.CPUFreq.48.build.f_cpu=48000000L
+envimote.menu.CPUFreq.24=24MHz
+envimote.menu.CPUFreq.24.build.f_cpu=24000000L
+envimote.menu.CPUFreq.16=16MHz
+envimote.menu.CPUFreq.16.build.f_cpu=16000000L
+envimote.menu.CPUFreq.8=8MHz
+envimote.menu.CPUFreq.8.build.f_cpu=8000000L
+
+envimote.menu.BootloaderLD.YES=Width Bootloader
+envimote.menu.BootloaderLD.YES.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+envimote.menu.BootloaderLD.NO=Widthout Bootloader
+envimote.menu.BootloaderLD.NO.build.ldscript=linker_scripts/gcc/flash_without_bootloader.ld
 
 #--------------------------------------------------------------------------------------#

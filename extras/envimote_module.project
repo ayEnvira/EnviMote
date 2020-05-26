@@ -56,39 +56,78 @@
   </Settings>
   <VirtualDirectory Name="module">
     <VirtualDirectory Name="bootloaders">
-      <VirtualDirectory Name="envimote_board_v1">
-        <File Name="../module/bootloaders/envimote_board_v1/Makefile"/>
+      <VirtualDirectory Name="envimote_board_v4">
+        <File Name="../module/bootloaders/envimote_board_v4/Makefile"/>
       </VirtualDirectory>
     </VirtualDirectory>
     <VirtualDirectory Name="libraries">
-      <VirtualDirectory Name="Getting-Started">
-        <File Name="../module/libraries/Getting-Started/Getting-Started.hpp"/>
+      <VirtualDirectory Name="ADC">
+        <File Name="../module/libraries/ADC/library.properties"/>
+        <VirtualDirectory Name="src">
+          <File Name="../module/libraries/ADC/src/EnviMote_ADS1115.cpp"/>
+          <File Name="../module/libraries/ADC/src/EnviMote_ADS1115.h"/>
+        </VirtualDirectory>
         <VirtualDirectory Name="examples">
-          <VirtualDirectory Name="blink">
-            <File Name="../module/libraries/Getting-Started/examples/blink/blink.ino"/>
+          <VirtualDirectory Name="differential">
+            <File Name="../module/libraries/ADC/examples/differential/differential.ino"/>
           </VirtualDirectory>
-          <VirtualDirectory Name="button_SW0">
-            <File Name="../module/libraries/Getting-Started/examples/button_SW0/button_SW0.ino"/>
+          <VirtualDirectory Name="singleended">
+            <File Name="../module/libraries/ADC/examples/singleended/singleended.ino"/>
           </VirtualDirectory>
         </VirtualDirectory>
-        <File Name="../module/libraries/Getting-Started/library.properties"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="EEPROM">
+        <File Name="../module/libraries/EEPROM/library.properties"/>
+        <VirtualDirectory Name="src">
+          <File Name="../module/libraries/EEPROM/src/EnviMote_24LC256.cpp"/>
+          <File Name="../module/libraries/EEPROM/src/EnviMote_24LC256.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="EEPROM">
+            <File Name="../module/libraries/EEPROM/examples/EEPROM/EEPROM.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="RTC">
+        <File Name="../module/libraries/RTC/library.properties"/>
+        <VirtualDirectory Name="src">
+          <File Name="../module/libraries/RTC/src/EnviMote_DS3231.cpp"/>
+          <File Name="../module/libraries/RTC/src/EnviMote_DS3231.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="RTC">
+            <File Name="../module/libraries/RTC/examples/RTC/now.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Flash">
+        <File Name="../module/libraries/Flash/library.properties"/>
+        <VirtualDirectory Name="src">
+          <File Name="../module/libraries/Flash/src/EnviMote_SerialFlash.cpp"/>
+          <File Name="../module/libraries/Flash/src/EnviMote_SerialFlash.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="FlashHardwareTest">
+            <File Name="../module/libraries/Flash/examples/FlashHardwareTest/FlashHardwareTest.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
       </VirtualDirectory>
     </VirtualDirectory>
     <VirtualDirectory Name="variants">
-      <VirtualDirectory Name="envimote_board_v1">
-        <File Name="../module/variants/envimote_board_v1/pins_arduino.h"/>
-        <File Name="../module/variants/envimote_board_v1/variant.cpp"/>
-        <File Name="../module/variants/envimote_board_v1/variant.h"/>
-        <File Name="../module/variants/envimote_board_v1/variantInit.cpp"/>
+      <VirtualDirectory Name="envimote_board_v4">
+        <File Name="../module/variants/envimote_board_v4/pins_arduino.h"/>
+        <File Name="../module/variants/envimote_board_v4/variant.cpp"/>
+        <File Name="../module/variants/envimote_board_v4/variant.h"/>
+        <File Name="../module/variants/envimote_board_v4/variantInit.cpp"/>
         <VirtualDirectory Name="debug_scripts">
-          <File Name="../module/variants/envimote_board_v1/debug_scripts/variant_edbg.gdb"/>
+          <File Name="../module/variants/envimote_board_v4/debug_scripts/variant_edbg.gdb"/>
         </VirtualDirectory>
         <VirtualDirectory Name="linker_scripts">
-          <File Name="../module/variants/envimote_board_v1/linker_scripts/gcc/flash_with_bootloader.ld"/>
-          <File Name="../module/variants/envimote_board_v1/linker_scripts/gcc/flash_without_bootloader.ld"/>
+          <File Name="../module/variants/envimote_board_v4/linker_scripts/gcc/flash_with_bootloader.ld"/>
+          <File Name="../module/variants/envimote_board_v4/linker_scripts/gcc/flash_without_bootloader.ld"/>
         </VirtualDirectory>
         <VirtualDirectory Name="openocd_scripts">
-          <File Name="../module/variants/envimote_board_v1/openocd_scripts/variant_atmel_edbg.cfg"/>
+          <File Name="../module/variants/envimote_board_v4/openocd_scripts/variant_atmel_edbg.cfg"/>
         </VirtualDirectory>
       </VirtualDirectory>
     </VirtualDirectory>

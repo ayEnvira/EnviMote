@@ -173,6 +173,18 @@ const PinDescription g_APinDescription[]=
   { PORTB, 01, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_TIMER), No_ADC_Channel, NOT_ON_PWM, TC7_CH0, EXTERNAL_INT_1 },
   { PORTB, 02, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM6_CH0, TC7_CH1, EXTERNAL_INT_2 },
 
+/* +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
+ * | Pin number | Digital          |  PIN   | Label/Name      | Comments (* is for default peripheral in use)
+ * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
+ * | 52         |                  |  PA12  | SPI1/MOSI       | 
+ * | 53         |                  |  PA13  | SPI1/MISO       | 
+ * | 54         |                  |  PA15  | SPI1/CLK        | 
+ * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
+ */
+  { PORTA, 12, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_13 }, // TX: SERCOM2/PAD[0]
+  { PORTA, 13, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_13 }, // RX: SERCOM2/PAD[1]
+  { PORTA, 15, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_15 },
+
 };
 
 const void* g_apTCInstances[TCC_INST_NUM+TC_INST_NUM]={ TCC0, TCC1, TCC2, TC3, TC4, TC5, TC6, TC7 } ;
